@@ -1,0 +1,179 @@
+/* Screen styles */
+.cv-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px;
+  background: white;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.cv-header {
+  text-align: center;
+  border-bottom: 3px solid #2563eb;
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+}
+
+.cv-header h1 {
+  margin: 0;
+  font-size: 32px;
+  color: #1e40af;
+  letter-spacing: 2px;
+}
+
+.cv-subtitle {
+  font-size: 18px;
+  color: #4b5563;
+  margin: 8px 0;
+  font-weight: 500;
+}
+
+.cv-contact {
+  font-size: 13px;
+  color: #6b7280;
+  margin-top: 12px;
+}
+
+.cv-section {
+  margin-bottom: 25px;
+}
+
+.cv-section-title {
+  font-size: 18px;
+  color: #1e40af;
+  border-bottom: 2px solid #3b82f6;
+  padding-bottom: 6px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.cv-item {
+  margin-bottom: 18px;
+}
+
+.cv-item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 6px;
+}
+
+.cv-date {
+  color: #6b7280;
+  font-size: 14px;
+  font-style: italic;
+  white-space: nowrap;
+  margin-left: 15px;
+}
+
+.cv-text {
+  font-size: 14px;
+  line-height: 1.7;
+  text-align: justify;
+  color: #374151;
+}
+
+.cv-text-sm {
+  font-size: 13px;
+  color: #6b7280;
+  font-style: italic;
+}
+
+.cv-list {
+  margin: 8px 0;
+  padding-left: 25px;
+}
+
+.cv-list li {
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #374151;
+}
+
+.cv-skills-compact div,
+.cv-footer-compact div {
+  font-size: 13px;
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.cv-footer-note {
+  text-align: center;
+  font-size: 13px;
+  color: #6b7280;
+  margin-top: 30px;
+  padding-top: 15px;
+  border-top: 1px solid #e5e7eb;
+  font-style: italic;
+}
+
+.print-button {
+  transition: all 0.3s ease;
+}
+
+.print-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* CRITICAL: Print styles for AI extraction */
+@media print {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+
+  /* Hide the print button */
+  .print-button {
+    display: none !important;
+  }
+
+  .cv-container {
+    max-width: 100%;
+    margin: 0;
+    padding: 20px;
+    box-shadow: none;
+    background: white;
+  }
+
+  /* Ensure all text is selectable and black */
+  * {
+    color: #000 !important;
+    background: white !important;
+  }
+
+  /* Keep structure visible */
+  .cv-header {
+    border-bottom: 2px solid #000;
+  }
+
+  .cv-section-title {
+    border-bottom: 2px solid #000;
+    page-break-after: avoid;
+  }
+
+  /* Prevent page breaks in the middle of sections */
+  .cv-item {
+    page-break-inside: avoid;
+  }
+
+  /* Ensure links are visible */
+  a {
+    text-decoration: underline;
+  }
+
+  /* Force black text for better OCR */
+  h1, h2, h3, strong, .cv-date {
+    color: #000 !important;
+  }
+}
+
+/* Additional accessibility for PDF extraction */
+@page {
+  margin: 1.5cm;
+  size: A4;
+}
