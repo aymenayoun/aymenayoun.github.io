@@ -191,7 +191,7 @@ const CV = () => {
         {/* Header */}
         <div style={styles.cvHeader}>
           <h1 style={styles.cvTitle}>AYOUNI AYMEN</h1>
-          <div style={styles.cvSubtitle}>Étudiant Ingénieur en Génie Logiciel</div>
+          <div style={styles.cvSubtitle}>Ingénieur en Génie Logiciel — IA &amp; Développement Full-Stack</div>
           <div style={styles.cvContact}>
             ayouniaymen.inc@gmail.com • +216 26 708 932 • Sidi-Bouzid, Tunisie • linkedin.com/in/aymen-ayouni-85457a322
           </div>
@@ -201,9 +201,10 @@ const CV = () => {
         <div style={styles.cvSection}>
           <h2 style={styles.cvSectionTitle}>PROFIL</h2>
           <p style={styles.cvText}>
-            Étudiant ingénieur en Génie Logiciel spécialisé en IA/ML, développement full-stack et systèmes intelligents. 
-            Expérience en vision par ordinateur, OCR, développement mobile (Flutter) et web (Spring Boot, Django, Angular). 
-            Recherche un stage PFE pour mettre en pratique mes compétences en développement de solutions innovantes.
+            Ingénieur en Génie Logiciel diplômé, spécialisé en IA/ML appliquée et développement full-stack.
+            Conception et mise en production de systèmes complets : backends Spring Boot, frontends Angular,
+            microservices d'inférence Python, pipelines CI/CD conteneurisés. Expérience en prévision de séries
+            temporelles, détection d'anomalies, systèmes RAG, vision par ordinateur et développement mobile Flutter.
           </p>
         </div>
 
@@ -213,7 +214,7 @@ const CV = () => {
           <div style={styles.cvItem}>
             <div style={styles.cvItemHeader}>
               <div>
-                <strong>Cycle d'Ingénieur - Génie Logiciel</strong> | École Supérieure Privée d'Ingénieurs de Gafsa (ESIP)
+                <strong>Diplôme d'Ingénieur - Génie Logiciel</strong> | École Supérieure Privée d'Ingénieurs de Gafsa (ESIP)
               </div>
               <div style={styles.cvDate}>2021 - 2026</div>
             </div>
@@ -224,6 +225,19 @@ const CV = () => {
         {/* Experience */}
         <div style={styles.cvSection}>
           <h2 style={styles.cvSectionTitle}>EXPÉRIENCE PROFESSIONNELLE</h2>
+
+          <div style={styles.cvItem}>
+            <div style={styles.cvItemHeader}>
+              <div><strong>Ingénieur Stagiaire PFE</strong> | SNDP / AGIL - Société Nationale de Distribution des Pétroles</div>
+              <div style={styles.cvDate}>Fév - Juin 2026</div>
+            </div>
+            <ul style={styles.cvList}>
+              <li style={styles.cvListItem}>Conception et développement d'AGIL Energy, plateforme d'aide à la décision pour la gestion prédictive d'un réseau de stations-service (Spring Boot, Angular, FastAPI, MySQL)</li>
+              <li style={styles.cvListItem}>Moteur de prévision par ensemble (Random Forest, XGBoost, Prophet) avec quantiles P10/P50/P90 et calibration conforme</li>
+              <li style={styles.cvListItem}>Sécurité applicative : JWT avec rotation de refresh tokens et blacklist, 2FA par OTP, RBAC multi-niveaux (administrateur, régional, station)</li>
+              <li style={styles.cvListItem}>Déploiement conteneurisé (Docker Compose) et pipeline CI/CD GitHub Actions avec publication d'images sur GHCR</li>
+            </ul>
+          </div>
 
           <div style={styles.cvItem}>
             <div style={styles.cvItemHeader}>
@@ -254,6 +268,19 @@ const CV = () => {
 
           <div style={styles.cvItem}>
             <div style={styles.cvItemHeader}>
+              <div><strong>AGIL Energy</strong> — Système d'aide à la décision pour stations-service</div>
+              <div style={styles.cvDate}>2026</div>
+            </div>
+            <ul style={styles.cvList}>
+              <li style={styles.cvListItem}>Explicabilité des modèles par SHAP et détection d'anomalies de ventes (Isolation Forest, Z-score)</li>
+              <li style={styles.cvListItem}>Chatbot RAG hybride (FAISS + BM25) interrogeant la documentation et les données opérationnelles</li>
+              <li style={styles.cvListItem}>Cartographie interactive de la Tunisie (Leaflet/GeoJSON), alertes temps réel par WebSocket, exports PDF et Excel</li>
+              <li style={styles.cvListItem}>Tests automatisés : JUnit 5/Mockito côté backend, Karma/Jasmine et Playwright côté frontend</li>
+            </ul>
+          </div>
+
+          <div style={styles.cvItem}>
+            <div style={styles.cvItemHeader}>
               <div><strong>Sino–North Africa Competition (Médaille de Bronze)</strong></div>
               <div style={styles.cvDate}>2025</div>
             </div>
@@ -264,21 +291,11 @@ const CV = () => {
 
           <div style={styles.cvItem}>
             <div style={styles.cvItemHeader}>
-              <div><strong>Inventory Management System</strong> | Projet académique ESPIG</div>
+              <div><strong>Inventory Management System</strong> | Projet académique ESIP Gafsa</div>
               <div style={styles.cvDate}>2025</div>
             </div>
             <ul style={styles.cvList}>
               <li style={styles.cvListItem}>Gestion des stocks (Spring Boot/Angular/MySQL) avec module IA Python pour reconnaissance automatique des produits</li>
-            </ul>
-          </div>
-
-          <div style={styles.cvItem}>
-            <div style={styles.cvItemHeader}>
-              <div><strong>Flutter Parcel Tracking App</strong></div>
-              <div style={styles.cvDate}>2025</div>
-            </div>
-            <ul style={styles.cvList}>
-              <li style={styles.cvListItem}>Application de gestion et suivi de livraison en temps réel avec backend Firebase</li>
             </ul>
           </div>
         </div>
@@ -287,17 +304,18 @@ const CV = () => {
         <div style={styles.cvSection}>
           <h2 style={styles.cvSectionTitle}>COMPÉTENCES TECHNIQUES</h2>
           <div>
-            <div style={styles.cvSkillsCompact}><strong>Langages:</strong> Java, Python, JavaScript, Dart, SQL</div>
-            <div style={styles.cvSkillsCompact}><strong>Frameworks:</strong> Spring Boot, Django, Angular, Flutter, React</div>
-            <div style={styles.cvSkillsCompact}><strong>IA/ML:</strong> TensorFlow, Keras, OpenCV, Scikit-learn, PaddleOCR, YOLO</div>
+            <div style={styles.cvSkillsCompact}><strong>Langages:</strong> Java, Python, JavaScript, TypeScript, Dart, SQL</div>
+            <div style={styles.cvSkillsCompact}><strong>Frameworks:</strong> Spring Boot, Angular, FastAPI, Django, Flutter, React</div>
+            <div style={styles.cvSkillsCompact}><strong>IA/ML:</strong> Scikit-learn, XGBoost, Prophet, SHAP, TensorFlow, Keras, OpenCV, PaddleOCR, YOLO, FAISS</div>
             <div style={styles.cvSkillsCompact}><strong>Bases de données:</strong> MySQL, MongoDB, Firebase</div>
-            <div style={styles.cvSkillsCompact}><strong>Outils:</strong> Git, VS Code, IntelliJ • <strong>Méthodologies:</strong> Agile, Scrum, DevOps</div>
+            <div style={styles.cvSkillsCompact}><strong>DevOps &amp; Outils:</strong> Docker, Docker Compose, GitHub Actions, Git, IntelliJ, VS Code</div>
+            <div style={styles.cvSkillsCompact}><strong>Tests:</strong> JUnit 5, Mockito, Karma/Jasmine, Playwright • <strong>Méthodologies:</strong> Agile, Scrum</div>
           </div>
         </div>
 
         {/* Languages */}
         <div style={styles.cvSection}>
-          <h2 style={styles.cvSectionTitle}>LANGUES & COMPÉTENCES TRANSVERSALES</h2>
+          <h2 style={styles.cvSectionTitle}>LANGUES &amp; COMPÉTENCES TRANSVERSALES</h2>
           <div>
             <div style={styles.cvSkillsCompact}><strong>Langues:</strong> Arabe (Maternel), Français (Courant), Anglais (Courant)</div>
             <div style={styles.cvSkillsCompact}><strong>Soft Skills:</strong> Travail d'équipe, Communication, Résolution de problèmes, Gestion de projet, Adaptabilité</div>
@@ -306,7 +324,7 @@ const CV = () => {
 
         {/* Footer */}
         <div style={styles.cvFooterNote}>
-          Disponible immédiatement pour un stage PFE • Mobilité géographique en Tunisie
+          Disponible immédiatement • Mobilité géographique en Tunisie
         </div>
       </div>
     </div>
